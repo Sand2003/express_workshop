@@ -24,7 +24,7 @@ function signin(){
     
     axios({
         method: 'post',
-        url: 'http://localhost:3000/user/signin',
+        url: 'https://sand2003.github.io/express_workshop/Pokedex/user/signin',
         data: {
             user_name: name,
             user_mail: mail, 
