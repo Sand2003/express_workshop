@@ -67,7 +67,7 @@ pokemon.patch('/:id([0-9]{1,3})', async (req, res, next) => {
 
 pokemon.get('/', async (req, res, next)=> {
     const pk = await db.query("SELECT * FROM pokemon");
-        return  res.status(200).json({code: 1, message: pk});
+        return  res.status(200).json({code: 200, message: pk});
 });
 
 pokemon.get('/:id([0-9]{1,3})',async (req, res, next) => {
@@ -76,7 +76,7 @@ pokemon.get('/:id([0-9]{1,3})',async (req, res, next) => {
         const pok = await db.query("SELECT * FROM pokemon WHERE pok_id="+id+";");
          return res.status(200).json({code: 200, message: pok});
     }
-         res.status(404).send({code: 1, message: "Pokemon no encontrado"});
+         res.status(404).send({code: 200, message: "Pokemon no encontrado"});
 
 });
 
