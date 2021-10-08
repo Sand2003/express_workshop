@@ -2,7 +2,7 @@
 window.onload = init;
 // va a hacer que cuando una pestaña cargue los envie a init
 function init(){
-    if(localStorage.getItem("token")) {
+    if(!localStorage.getItem("token")) {
     document.querySelector('.btn-secondary').addEventListener('click', function(){
         window.location.href = "signin.html"
     });
