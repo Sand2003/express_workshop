@@ -23,7 +23,7 @@ function login(){
 
     axios({
         method: 'post',
-        url: 'https://sand2003.github.io/express_workshop/Pokedex/user/login',
+        url: 'http://localhost:3000/user/login',
         data: {
             user_mail: mail, 
             user_password: pass
